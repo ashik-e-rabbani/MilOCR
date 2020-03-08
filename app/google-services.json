@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "798725009942",
+    "firebase_url": "https://milocr-38e41.firebaseio.com",
+    "project_id": "milocr-38e41",
+    "storage_bucket": "milocr-38e41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798725009942:android:6d9fc286161b16cdebbb37",
+        "android_client_info": {
+          "package_name": "com.afss.milocr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798725009942-orgq9k9tbc3alh7nflm9706dvtrbnnu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZu2PrpLPgigZ-gWhZwQ_QI3xwVQ4xy2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798725009942-orgq9k9tbc3alh7nflm9706dvtrbnnu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
