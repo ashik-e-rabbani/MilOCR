@@ -1,31 +1,9 @@
-#log > div {
-  color: #313131;
-  border-top: 1px solid #dadada;
-  padding: 9px;
-  display: flex;
-}
-#log > div:first-child {
-  border: 0;
-}
-.status {
-  min-width: 250px;
-}
-#log {
-  border: 1px solid #dadada;
-  padding: 10px;
-  min-height: 200px;
-}
+
+
 .image-container img{
   border: 1px solid #dadada;
 }
-progress {
-  display: block;
-  width: 100%;
-  transition: opacity 0.5s linear;
-}
-progress[value="1"] {
-  opacity: 0.5;
-}
+
 select {
   padding: 12px 5px;
   width: 209px;
@@ -44,7 +22,7 @@ select {
   max-width: 80%;
   margin: auto;
   font-size: 1rem;
-  /* 20px */
+
   font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -52,12 +30,9 @@ select {
   display: inline-block;
   overflow: hidden;
   padding: 0.425rem 1rem;
-  /* 10px 20px */
+
 }
 
-.no-js .inputfile + label {
-  display: none;
-}
 
 .inputfile:focus + label,
 .inputfile.has-focus + label {
@@ -72,23 +47,23 @@ select {
   vertical-align: middle;
   fill: currentColor;
   margin-top: -0.25em;
-  /* 4px */
-  margin-right: 0.25em;
-  /* 4px */
+   margin-right: 0.25em;
+
 }
-
-
-/* style 1 */
-
 .inputfile-1 + label {
   color: #f1e5e6;
-  background-color:#1976d2;
+  background-color:#ffff;
+}
+
+#imgIcon
+{
+  color: #004ba0;
 }
 
 .inputfile-1:focus + label,
 .inputfile-1.has-focus + label,
 .inputfile-1 + label:hover {
-  background-color: #004ba0;
+  background-color: #ffff;
 }
 
 #arrow-right ,
@@ -112,27 +87,5 @@ select {
   color: #1976d2;
 }
 
-.fa-check{
-  color:green;
-}
 
-#log pre {
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
- }
-
- #startLink{
-   text-decoration: underline;
-   margin-top: 100px;
- }
-
- @media screen and (min-width: 992px) {
-  #startPre{
-    position: absolute;
-    top: 50px;
-    padding: 20px;
-  }
 }

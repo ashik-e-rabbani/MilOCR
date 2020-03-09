@@ -1,34 +1,34 @@
 $( document ).ready(function() {
+	//onButton click recognize initially hidden
 	document.getElementById("recu").style.visibility = "hidden";
+	document.getElementById("relo").style.visibility = "hidden";
+	//checking for the input File
 	var inputs = document.querySelectorAll( '.inputfile' );
+	//Sending the top/first Elemnet of the arry
 	Array.prototype.forEach.call( inputs, function( input )
 	{
-		var label	 = input.nextElementSibling,
-			labelVal = label.innerHTML;
+		
 
 		input.addEventListener( 'change', function( e )
 		{
 			var fileName = '';
-			if( this.files && this.files.length > 1 )
-				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-			else
-				fileName = e.target.value.split( '\\' ).pop();
+			fileName = e.target.value.split( '\\' ).pop();
 
 			if( fileName ){
-				label.querySelector( 'span' ).innerHTML = fileName;
-
+				
 				let reader = new FileReader();
 				reader.onload = function () {
 					let dataURL = reader.result;
 					$("#selected-image").attr("src", dataURL);
-					$("#selected-image").addClass("col-4");
+					
 				}
 				let file = this.files[0];
 				reader.readAsDataURL(file);
+				//sending file for recu
 				startRecognize(file);
 			}
 			else{
-				label.innerHTML = labelVal;
+			
 				$("#selected-image").attr("src", '');
 				$("#selected-image").removeClass("col-12");
 				$("#arrow-right").addClass("fa-arrow-right");
@@ -41,7 +41,7 @@ $( document ).ready(function() {
 			}
 		});
 
-		// Firefox bug fix
+		
 		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
 		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
 	});
@@ -135,9 +135,7 @@ function recognizeFile(file){
 	});
 	var langNow = "ben";
 
-	worker.recognize(file,
-		langNow
-	)
+	worker.recognize(file,langNow)
 		.progress(function(packet){
 			console.info(packet)
 			progressUpdate(packet)
@@ -151,9 +149,7 @@ function recognizeFile(file){
 		})
 		langNow="eng";
 
-		worker.recognize(file,
-		langNow
-	)
+		worker.recognize(file,langNow)
 		.progress(function(packet){
 			console.info(packet)
 			progressUpdate(packet)
@@ -166,6 +162,8 @@ function recognizeFile(file){
 		})
 		
 		document.getElementById("recu").style.visibility = "visible";
+		document.getElementById("relo").style.visibility = "visible";
+	
 	
 	
 }
